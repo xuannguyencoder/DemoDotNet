@@ -14,6 +14,22 @@ namespace DemoDotNet.WebMVC.Areas.Admin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+            //ProductController
+            context.MapRoute(
+                "ListProduct",
+                "admin/san-pham",
+                new { controller = "Product", action = "Index" }
+            );
+            context.MapRoute(
+                "CreateProduct",
+                "admin/san-pham/them",
+                new { controller = "Product", action = "Create" }
+            );
+            context.MapRoute(
+                "EditProduct",
+                "admin/san-pham/chinh-sua/{ID}",
+                new { controller = "Product", action = "Edit" }
+            );
             //ProductCategoryController
             context.MapRoute(
                 "ListProductCategory",

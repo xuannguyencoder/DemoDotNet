@@ -130,6 +130,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -143,6 +144,7 @@
     <Compile Include="Models\EF\Product.cs" />
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\ProductCategoryModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -3709,6 +3711,7 @@
     <Content Include="Assets\admin\vendor\x-editable\dist\bootstrap3-editable\img\clear.png" />
     <Content Include="Assets\admin\vendor\x-editable\dist\bootstrap3-editable\img\loading.gif" />
     <Content Include="Assets\admin\vendor\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.min.js" />
+    <Content Include="Assets\js\product.js" />
     <Content Include="Assets\js\toastr.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -3726,6 +3729,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Assets\uploads\images\products\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\web.config" />
@@ -4173,6 +4177,9 @@
     <Content Include="Areas\Admin\Views\Shared\_Error404.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Error400.cshtml" />
     <Content Include="Areas\Admin\Views\ProductCategory\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
