@@ -11,6 +11,58 @@ namespace DataStructure
         static void Main(string[] args)
         {
             //OOP();
+            //Dictionary();
+            LinkedList<Student> students = new LinkedList<Student>();
+            students.AddLast(new Student("SV001", "Truong Quoc Thai", 22, "Tra Vinh", "Cong nghe thong tin"));
+            students.AddLast(new Student("SV002", "Nguyen Truc Ngoc", 22, "Tra Vinh", "Cong nghe thong tin"));
+            students.AddLast(new Student("SV003", "Cao Thanh C", 22, "Tra Vinh", "Cong nghe thong tin"));
+            students.AddLast(new Student("SV004", "Tran Anh Tai", 22, "Tra Vinh", "Cong nghe thong tin"));
+
+            //Add đầu danh sách 
+            var studentNode = students.AddFirst(new Student("SV005", "Nguyen Thanh Xuan", 21, "Tra Vinh", "Cong nghe thong tin"));
+            //Add trước vị trí studentNode
+            students.AddBefore(studentNode, new Student("SV006", "Tran Van Nam", 21, "Ben Tre", "Cong nghe thong tin"));
+
+            //Remove phần tử đầu
+            students.RemoveFirst();
+            //Remove phần tử cuối
+            students.RemoveLast();
+            //Remove by ID
+            string ID = "SV005";
+            LinkedList<Student> students2 = new LinkedList<Student>(students);
+            foreach (var s in students2)
+            {
+                if (s.ID == ID)
+                {
+                    students.Remove(s);
+                    break;
+                }
+            }
+            //Lấy phần tử theo vị trí
+            int index = 1;
+            var student = students.ElementAt(index);
+            Console.WriteLine("Phan tu vi tri {0}: " + student.ToString(), index);
+
+            //Array
+            Student[] arryStudent = new Student[students.Count()];
+            students.CopyTo(arryStudent, 0);
+
+            Student student1 = new Student("SV002", "Nguyen Truc Ngan", 22, "Tra Vinh", "Cong nghe thong tin");
+            //set value cho phần tử theo vị trí
+            arryStudent.SetValue(student1, 1);
+            //get value của phần tử theo vị trí
+            var student3 = arryStudent.GetValue(1);
+            Console.WriteLine("Lay ra theo vi tri 1: " + student3.ToString());
+
+            foreach (var item in arryStudent)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            students.Clear();
+            Console.Read();
+        }
+        public static void Dictionary()
+        {
             Dictionary<string, Student> dic = new Dictionary<string, Student>()
             {
                 {"1", new Student("SV001", "Nguyen Thanh Xuan", 21, "Tra Vinh", "Cong nghe thong tin")}
